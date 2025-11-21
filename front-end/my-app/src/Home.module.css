@@ -1,0 +1,234 @@
+
+
+/* Calculator */ 
+.calculator {
+  /* border: 1px solid rgb(179, 179, 179); */
+  border-radius: 0.375rem;
+  width: 190px;
+  height: 254px;
+  font-family: Arial, sans-serif;
+  margin: 0 auto;
+  padding: 10px;
+}
+
+.output {
+  border: 1px solid #ccc;
+  border-radius: 0.375rem;
+  height: 40px;
+  margin-bottom: 10px;
+  margin-top: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  padding-right: 10px;
+}
+
+.result {
+    text-decoration: none;
+    border-style: none;
+    font-size: 20px;
+    width: 100%;
+    overflow:hidden;
+  border: none;
+  outline: none;
+  background: transparent;
+}
+
+.calcBtns {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 5px;
+}
+
+.btn {
+  border: none;
+  border-radius: 0.375rem;
+  padding: 10px;
+  background-color: #eee;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.btn:hover {
+  background-color: #ddd;
+}
+.btn:active {
+  background-color: #ccc;
+}
+
+.bgGreen {
+  background-color: rgba(0, 177, 29, 0.651);
+  color: white;
+
+    border: none;
+  border-radius: 0.375rem;
+  padding: 10px;
+    cursor: pointer;
+  font-size: 16px;
+}
+
+.bgGreen:hover {
+  background-color: rgba(0, 231, 39, 0.651);
+  color: white;
+}
+
+.bgRed {
+  background-color: rgba(223, 4, 4, 0.651);
+  color: white;
+
+      border: none;
+  border-radius: 0.375rem;
+  padding: 10px;
+    cursor: pointer;
+  font-size: 16px;
+}
+
+.bgRed:hover {
+  background-color: rgba(255, 1, 1, 0.651);
+  color: white;
+}
+
+@media (max-width: 767px) {
+  .calculator {
+    width: 100%;
+    height: 200px;
+  }
+}
+
+/* ------------------------------------------------------------------------------------------- */
+.nameInput {
+    border: none;
+  outline: none;
+  background: transparent;
+}
+
+
+/* Column width control */
+.noCol {
+  width: 50px;
+  text-align: center;
+}
+
+.itemCol {
+  width: 40%;
+}
+
+.qtyCol {
+  width: 25%;
+  text-align: center;
+}
+
+.amountCol {
+  width: 20%;
+  text-align: right;
+}
+
+.tableContainer {
+  max-height: 300px;
+  overflow-y: auto;     
+  overflow-x: auto;      
+  border: 1px solid #ddd;
+}
+.itemsTable {
+  width: 100%;
+  table-layout: fixed;   
+  border-collapse: collapse;
+  margin-top: 16px;
+  font-family: "Poppins", sans-serif;
+  font-size: 15px;
+  background-color: #fff;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.1);
+}
+
+
+
+.customerInfo {
+  display: flex;
+  justify-content:space-around;
+  gap: 10px;
+  padding: 10px 12px;
+  background-color: #f8f9fa;
+  border-bottom: 1px solid #ddd;
+}
+
+.customerInput {
+  padding: 6px 10px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  outline: none;
+  font-size: 14px;
+  transition: border-color 0.2s ease;
+}
+
+.customerInput:focus {
+  border-color: #007bff;
+}
+
+.tableHeaderRow {
+  background-color: #171818;
+  color: white;
+  text-align: left;
+}
+
+.tableHeaderCell {
+  padding: 10px 12px;
+  font-weight: 600;
+}
+
+.tableBody {
+  overflow: scroll;
+}
+
+.tableRow {
+  background-color: #fff;
+}
+
+.tableRow:nth-child(even) {
+  background-color: #f9f9f9;
+}
+
+.tableRow:hover {
+  background-color: #eef5ff;
+}
+
+.tableCell {
+  padding: 10px 12px;
+  border-bottom: 1px solid #eee;
+  color: #333;
+}
+
+@media (max-width: 600px) {
+  .tableHeaderCell,
+  .tableCell {
+    padding: 8px;
+    font-size: 13px;
+  }
+
+  .customerInfo {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .customerInput {
+    width: 100%;
+  }
+}
+
+@media (min-width: 767px) {
+  .calcContainer {
+    display: flex;
+    flex-direction: row;
+    padding: 20px;
+    gap: 10px;
+  }
+
+  .calculator {
+    width: 30%;
+  }
+
+  .tableContainer {
+    width: 70%;
+  }
+}
